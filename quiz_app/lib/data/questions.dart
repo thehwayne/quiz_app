@@ -11,6 +11,16 @@ const questions = [
     ]
   ),
 
+      QuizQuestion(
+    'What is the name of the company that sells both weapons and cosmetics in the TF2 universe?',
+    [
+      'Mann Co.', //Correct Answer
+      'Apple',
+      'Valve', 
+      'Aperture Science'  
+    ]
+  ),
+
   QuizQuestion(
     'Who is the Scout\'s Father?',
     [
@@ -38,16 +48,6 @@ const questions = [
       'Poopy Joe',
       'Merasmus the Magician', //Correct Answer
       'Dolly Parton'  
-    ]
-  ),
-
-    QuizQuestion(
-    'What is the name of the company that sells both weapons and cosmetics in the TF2 universe?',
-    [
-      'Mann Co.', //Correct Answer
-      'Apple',
-      'Valve', 
-      'Aperture Science'  
     ]
   )
 
