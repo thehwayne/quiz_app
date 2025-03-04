@@ -49,6 +49,16 @@ const questions = [
       'Merasmus the Magician', //Correct Answer
       'Dolly Parton'  
     ]
+  ),
+
+      QuizQuestion(
+    'What does killing a player who\'s wearing the Ghastly Gibus do?',
+    [
+      'It gives you a hat', //Correct Answer
+      'The enemy player explodes instead of ragdolling',
+      'It releases a ghost that can kill other players', 
+      'Nothing happens'  
+    ]
   )
 
 ];
