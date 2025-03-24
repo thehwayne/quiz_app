@@ -4,9 +4,9 @@ const questions = [
         QuizQuestion(
     'What are the teams RED and BLU fighting over?',
     [
+      'A useless plot of land with gravel', //Correct Answer
       'A huge gold mine', 
       'A mysterious asteroid filled with powerful gems',
-      'A useless plot of land with gravel', //Correct Answer
       'A couple of oil refineries'  
     ]
   ),
@@ -24,8 +24,8 @@ const questions = [
   QuizQuestion(
     'Who is the Scout\'s Father?',
     [
-      'The Heavy',
       'The Spy', //Correct Answer
+      'The Heavy',
       'Tom Jones',
       'Gordon Freeman'
     ]
@@ -34,19 +34,19 @@ const questions = [
   QuizQuestion(
     'What does the Dead Ringer do?',
     [
+      'Allows a player to feign death',  //Correct Answer
       'Nothing special, it\'s a stock weapon',
       'Applies 8 seconds of bleed damage to enemies',
       'Allows a player to go invisible for longer if they don\'t move',
-      'Allows a player to feign death'  //Correct Answer
     ]
   ),
 
     QuizQuestion(
     'Who is the Soldier\'s rather unique roommate?',
     [
+      'Merasmus the Magician', //Correct Answer
       'Santa Claus',
       'Poopy Joe',
-      'Merasmus the Magician', //Correct Answer
       'Dolly Parton'  
     ]
   ),
