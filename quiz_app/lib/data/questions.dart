@@ -35,7 +35,7 @@ const questions = [
     'What does the Dead Ringer do?',
     [
       'Nothing special, it\'s a stock weapon',
-      'Applies burn damage to enemies',
+      'Applies 8 seconds of bleed damage to enemies',
       'Allows a player to go invisible for longer if they don\'t move',
       'Allows a player to feign death'  //Correct Answer
     ]
