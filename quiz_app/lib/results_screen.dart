@@ -7,7 +7,10 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswers,
+    required this.onRestart,
   });
+
+  final void Function() onRestart;
 
   final List<String> chosenAnswers;
 
@@ -65,7 +68,7 @@ class ResultsScreen extends StatelessWidget {
               )
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: onRestart,
               child: Text(
                 'Restart Quiz',
                 style: GoogleFonts.lato(
