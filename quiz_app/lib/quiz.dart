@@ -22,9 +22,11 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       //switch to the results screen instead
       setState(() {
+        final answers = List.of(selectedAnswers); // This makes a copy of selected answers before the list gets cleared
         selectedAnswers = [];
-        activeScreen = ResultsScreen(chosenAnswers: selectedAnswers,);
+        activeScreen = ResultsScreen(chosenAnswers: answers);
       });
+
     }
   }
 
