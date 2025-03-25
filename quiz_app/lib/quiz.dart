@@ -13,18 +13,20 @@ class Quiz extends StatefulWidget {
   }
 }
 
+//Stateful widget
 class _QuizState extends State<Quiz> {
-  List<String> selectedAnswers = [];
+  List<String> selectedAnswers = []; //Keeps track of user answers
   Widget? activeScreen;
 
+//
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
 
     if (selectedAnswers.length == questions.length) {
-      final answers = List.of(selectedAnswers); 
+      final answers = List.of(selectedAnswers); // Makes copy of the answers for the results
       setState(() {
-        selectedAnswers = [];
-        activeScreen = ResultsScreen(
+        selectedAnswers = []; // Clear list for next run
+        activeScreen = ResultsScreen( //Switch to results screen
           chosenAnswers: answers,
           onRestart: restartQuiz,
         );
@@ -33,25 +35,28 @@ class _QuizState extends State<Quiz> {
   }
   @override
   void initState() {
-    activeScreen = StartScreen(switchScreen);
+    activeScreen = StartScreen(switchScreen); //Start screen
     super.initState();
   }
 
   void switchScreen() {
     setState(() {
-      activeScreen = QuestionsScreen(
-        onSelectedAnswer: chooseAnswer,
+      activeScreen = QuestionsScreen( //Questions screen
+        onSelectedAnswer: chooseAnswer, 
       );
     });
   }
 
 
+//Restart function
   void restartQuiz() {
     setState(() {
       activeScreen = StartScreen(switchScreen);
     });
   }
 
+
+//UI stuff
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

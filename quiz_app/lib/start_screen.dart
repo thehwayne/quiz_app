@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+// Stateless widget for start screen
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
 
   final void Function() startQuiz;
 
+// UI related code
   @override
   Widget build(BuildContext context) {
     return Center(

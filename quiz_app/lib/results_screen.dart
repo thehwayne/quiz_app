@@ -3,6 +3,8 @@ import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_summary.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
+//Stateless widget for results screen
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
@@ -10,10 +12,12 @@ class ResultsScreen extends StatelessWidget {
     required this.onRestart,
   });
 
-  final void Function() onRestart;
+  final void Function() onRestart; //This is needed for restart function
 
-  final List<String> chosenAnswers;
+  final List<String> chosenAnswers;// Keeps list of user answers
 
+
+//Builds summary with index of question, question text, the correct answer, and the user's answer
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
@@ -31,10 +35,13 @@ class ResultsScreen extends StatelessWidget {
     return summary;
   }
 
+
+//UI stuff
   @override
   Widget build(context) {
   final summaryData = getSummaryData(); 
 
+//This figures out how many the user got right and how many questions there are (in total, 6)
   final numTotalQuestions = questions.length;
   final numCorrectQuestions = summaryData.where(
     (data){
@@ -63,7 +70,7 @@ class ResultsScreen extends StatelessWidget {
             ),
             SizedBox( //Sized box and added scrolling capability
               height: 300,
-              child: SingleChildScrollView(
+              child: SingleChildScrollView( //used this as reference https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html
                 child: QuestionsSummary(summaryData: getSummaryData()),
               )
             ),

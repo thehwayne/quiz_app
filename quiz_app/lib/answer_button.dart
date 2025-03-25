@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Stateless widget for answer button
 class AnswerButton extends StatelessWidget {
   const AnswerButton(
       {required this.answerText, required this.onTap, super.key});
@@ -7,6 +8,7 @@ class AnswerButton extends StatelessWidget {
   final String answerText;
   final void Function() onTap;
 
+//UI related code
   @override
   Widget build(context) {
     return ElevatedButton(
